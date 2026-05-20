@@ -52,16 +52,16 @@ section{position:relative;z-index:1}
 .panel-box{background:var(--bg3);border:1px solid var(--line);overflow:hidden}
 .panel-hdr{padding:.65rem 1rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.5rem}
 .panel-dot{width:6px;height:6px;background:var(--blue)}
-.panel-title{font-family:var(--mono);font-size:.72rem;color:var(--blue);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.panel-title{font-family:var(--mono);font-size:.8rem;color:var(--blue);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
 .panel-stats{display:grid;grid-template-columns:1fr 1fr}
 .ps{padding:.9rem 1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .ps:nth-child(even){border-right:none}
 .ps:nth-last-child(-n+2){border-bottom:none}
 .ps-val{font-family:var(--display);font-size:2.2rem;color:var(--blue);letter-spacing:.03em;line-height:1}
-.ps-label{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spacing:.1em;text-transform:uppercase;margin-top:.25rem;font-weight:600}
-.ps-sub{font-family:var(--mono);font-size:.62rem;color:var(--ink2);margin-top:.1rem;opacity:.9}
+.ps-label{font-family:var(--mono);font-size:.85rem;color:var(--ink2);letter-spacing:.1em;text-transform:uppercase;margin-top:.25rem;font-weight:600}
+.ps-sub{font-family:var(--mono);font-size:.75rem;color:var(--ink2);margin-top:.1rem;opacity:.9}
 .panel-ftr{padding:.65rem 1rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
-.panel-ftr-txt{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spacing:.1em;font-weight:600}
+.panel-ftr-txt{font-family:var(--mono);font-size:.75rem;color:var(--ink2);letter-spacing:.1em;font-weight:600}
 .live-dot{width:7px;height:7px;background:#22ff88;border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.72rem;color:var(--ink2);letter-spacing:.16em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bob 2.5s ease-in-out infinite;font-weight:600}
@@ -230,7 +230,8 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
       <div class="hero-desc">Specializing in CFD, FEA, conjugate heat transfer, and multi-objective optimization — building high-fidelity computational models that bridge simulation accuracy with engineering insight.</div>
       <div class="hero-btns">
         <div class="hero-btn-row">
-          <a href="#projects" class="btn-p"> View Projects</a>
+          <a href="#projects" class="btn-p">View Projects</a>
+          <a href="#publications" class="btn-p">View Publications</a>
           <a href="Arun_Harrish_Resume.pdf" download class="btn-o">Download Resume</a>
           <a href="#contact" class="btn-o">Get in Touch</a>
         </div>
@@ -238,14 +239,12 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
     </div>
     <div class="hero-panel">
       <div class="panel-box">
-        <div class="panel-hdr"><div class="panel-dot"></div><div class="panel-title">Engineering Profile · Live</div></div>
+        <div class="panel-hdr"><div class="panel-title">Engineering Profile · Live</div></div>
         <div class="panel-stats">
           <div class="ps"><div class="ps-val">4.0</div><div class="ps-label">GPA</div><div class="ps-sub">Georgia Tech MS</div></div>
-          <div class="ps"><div class="ps-val">2</div><div class="ps-label">Conf. Papers</div><div class="ps-sub">ASME FEDSM 2026</div></div>
-          <div class="ps"><div class="ps-val">3+</div><div class="ps-label">Industries</div><div class="ps-sub">Engine · Crane · Auto</div></div>
-          <div class="ps"><div class="ps-val">6+</div><div class="ps-label">Projects</div><div class="ps-sub">CFD · FEA · Optim.</div></div>
-          <div class="ps"><div class="ps-val">10+</div><div class="ps-label">Sim Tools</div><div class="ps-sub">ANSYS · Fluent · more</div></div>
-          <div class="ps"><div class="ps-val">Top 10</div><div class="ps-label">Baja SAE India</div><div class="ps-sub">of 80 national teams</div></div>
+          <div class="ps"><div class="ps-val">3</div><div class="ps-label">Conf. Papers</div><div class="ps-sub">ASME FEDSM 2026</div></div>
+          <div class="ps"><div class="ps-val">3+</div><div class="ps-label">Internships</div><div class="ps-sub">Modeling & Simulation · NPD</div></div>
+          <div class="ps"><div class="ps-val">6+</div><div class="ps-label">Projects</div><div class="ps-sub">CFD · FEA · Optimization</div></div>
         </div>
         <div class="panel-ftr">
           <div class="panel-ftr-txt">STATUS · OPEN TO OPPORTUNITIES</div>
@@ -259,21 +258,112 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 
 <section id="about">
   <div class="sw">
-    <div class="sh reveal"><div class="sh-eye">About</div><div class="sh-title">SIMULATION-DRIVEN<br>ENGINEERING</div><div class="sh-rule"><div class="sh-line"></div><div class="sh-meta">Profile · Background · Skills</div></div></div>
+
+    <div class="sh reveal">
+      <div class="sh-eye">About</div>
+      <div class="sh-title">
+        MECHANICAL ENGINEER -<br>
+        FLUID AND THERMAL SYSTEMS
+      </div>
+
+      <div class="sh-rule">
+        <div class="sh-line"></div>
+        <div class="sh-meta">Modeling · Simulation · Optimization</div>
+      </div>
+    </div>
+
     <div class="about-grid">
+
       <div class="about-body reveal">
-        <p>I'm a graduate student at <strong>Georgia Institute of Technology</strong> pursuing my MS in Mechanical Engineering, maintaining a perfect 4.0 GPA. My work sits at the intersection of high-fidelity simulation, machine learning, and design optimization.</p>
-        <p>From <strong>conjugate heat transfer</strong> on rotary engine cooling systems at LiquidPiston, to <strong>aerodynamic wind load prediction</strong> for tower cranes using parametric RANS CFD — I build models that are both accurate and actionable.</p>
-        <p>I'm particularly drawn to problems where <strong>surrogate modeling and DOE</strong> can replace expensive simulation loops, reducing computation time by 60%+ without sacrificing fidelity. My undergraduate background at <strong>PSG College of Technology</strong> (3.97/4.0) and three years leading a 25-member Baja SAE team ground everything in real engineering constraints.</p>
-        <p>Currently a Graduate Research Assistant at GT's <strong>Crane Safety Research Center</strong>, where I've also authored two accepted conference papers for ASME FEDSM 2026.</p>
+
+        <p>
+          I'm a Mechanical Engineering graduate student at 
+          <strong>Georgia Tech</strong> working in computational modeling, 
+          simulation-driven design, and engineering optimization. My work focuses on 
+          CFD, thermal-fluid systems, structural analysis, and reduced-order modeling 
+          for complex engineering applications.
+        </p>
+
+        <p>
+          My recent work spans <strong>conjugate heat transfer and coolant flow analysis</strong> 
+          at LiquidPiston and <strong>wind-load prediction for tower cranes</strong> 
+          at Georgia Tech’s Crane Safety Research Center, where I develop scalable CFD 
+          workflows and reduced-order models for large parametric studies.
+        </p>
+
+        <p>
+          I’m particularly interested in combining 
+          <strong>physics-based simulation with optimization and surrogate modeling</strong> 
+          to reduce computational cost while maintaining engineering accuracy. 
+          My work has involved DOE methods, Gaussian Process Regression, NSGA-II optimization, 
+          and HPC-driven CFD automation.
+        </p>
+
+        <p>
+          Before Georgia Tech, I completed my undergraduate studies at 
+          <strong>PSG College of Technology</strong> and led a 25-member Baja SAE team focused on 
+          vehicle design and integration. That experience kick-started my interest in 
+          building engineering solutions that connect analysis, performance, and real-world implementation.
+        </p>
+
       </div>
+
       <div class="skills-wrap reveal">
-        <div><div class="sg-lbl">Simulation</div><div class="tags"><span class="tag">ANSYS</span><span class="tag">Fluent</span><span class="tag">OpenFOAM</span><span class="tag">COMSOL</span><span class="tag">GT-SUITE</span><span class="tag">ParaView</span></div></div>
-        <div><div class="sg-lbl">Methods</div><div class="tags"><span class="tag">CFD</span><span class="tag">FEA</span><span class="tag">CHT</span><span class="tag">RANS</span><span class="tag">DOE</span><span class="tag">NSGA-II</span><span class="tag">RBDO</span></div></div>
-        <div><div class="sg-lbl">Programming</div><div class="tags"><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">Bash Scripting</span></div></div>
-        <div><div class="sg-lbl">ML & Optimization</div><div class="tags"><span class="tag">Gaussian Process</span><span class="tag">Neural Networks</span><span class="tag">Ridge/Lasso</span><span class="tag">Pareto Front</span><span class="tag">Meta-Modeling</span></div></div>
-        <div><div class="sg-lbl">CAD & HPC</div><div class="tags"><span class="tag">SolidWorks</span><span class="tag">CATIA</span><span class="tag">Creo</span><span class="tag">PACE HPC</span></div></div>
+
+        <div>
+          <div class="sg-lbl">Software & Tools</div>
+          <div class="tags">
+            <span class="tag">ANSYS Fluent</span>
+            <span class="tag">GT-SUITE</span>
+            <span class="tag">COMSOL</span>
+            <span class="tag">OpenFOAM</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Python</span>
+            <span class="tag">GMSH</span>
+            <span class="tag">ParaView</span>
+            <span class="tag">PyFR</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="sg-lbl">CAD & Engineering</div>
+          <div class="tags">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">CATIA</span>
+            <span class="tag">Creo Parametric</span>
+            <span class="tag">Fusion 360</span>
+            <span class="tag">AutoCAD</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="sg-lbl">Simulation & Analysis</div>
+          <div class="tags">
+            <span class="tag">CFD</span>
+            <span class="tag">FEA</span>
+            <span class="tag">CHT</span>
+            <span class="tag">FSI</span>
+            <span class="tag">Thermal Systems</span>
+            <span class="tag">RANS</span>
+            <span class="tag">LES</span>
+            <span class="tag">Species Transport</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="sg-lbl">Optimization & Modeling</div>
+          <div class="tags">
+            <span class="tag">Regression Modeling</span>
+            <span class="tag">Gaussian Process Regression</span>
+            <span class="tag">NSGA-II</span>
+            <span class="tag">Reliability Based Design Optimization</span>
+            <span class="tag">Reduced-Order Modeling</span>
+            <span class="tag">Neural Networks</span>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 </section>
