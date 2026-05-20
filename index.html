@@ -436,16 +436,81 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 
 <section id="publications">
   <div class="sw">
-    <div class="sh reveal"><div class="sh-eye">Publications</div><div class="sh-title">RESEARCH<br>OUTPUT</div><div class="sh-rule"><div class="sh-line"></div><div class="sh-meta">Click for abstract & details</div></div></div>
+    
+    <div class="sh reveal">
+      <div class="sh-eye">Publications</div>
+      <div class="sh-title">RESEARCH<br>OUTPUT</div>
+      <div class="sh-rule">
+        <div class="sh-line"></div>
+        <div class="sh-meta">Click for abstract & details</div>
+      </div>
+    </div>
+
     <div class="pub-list">
+
+      <!-- Publication 1 -->
       <div class="pub" data-modal="pub1">
-        <div><div class="pub-sr"><div class="pub-sdot"></div><div class="pub-status">Accepted · Under Review</div></div><div class="pub-title">CFD Methodology and Reduced-Order Model for Wind Load Prediction on Tower Cranes</div><div class="pub-venue">ASME Fluids Engineering Division Summer Meeting · <span>FEDSM 2026</span> · Atlanta, GA</div></div>
+        <div>
+          <div class="pub-sr">
+            <div class="pub-sdot"></div>
+            <div class="pub-status">Accepted · ASME FEDSM 2026</div>
+          </div>
+
+          <div class="pub-title">
+            Computational and Empirical Framework for Directional Wind Load Prediction on Partially Assembled Tower Cranes
+          </div>
+
+          <div class="pub-venue">
+            ASME Fluids Engineering Division Summer Meeting · 
+            <span>FEDSM 2026</span> · Bellevue, WA
+          </div>
+        </div>
+
         <div class="pub-arr">View Details ↗</div>
       </div>
+
+      <!-- Publication 2 -->
       <div class="pub" data-modal="pub2">
-        <div><div class="pub-sr"><div class="pub-sdot"></div><div class="pub-status">Accepted · Under Review</div></div><div class="pub-title">Aerodynamic Exposure Quantification in Lattice Tower Structures via Area-Based Decomposition</div><div class="pub-venue">ASME Fluids Engineering Division Summer Meeting · <span>FEDSM 2026</span> · Atlanta, GA</div></div>
+        <div>
+          <div class="pub-sr">
+            <div class="pub-sdot"></div>
+            <div class="pub-status">Accepted · ASME FEDSM 2026</div>
+          </div>
+
+          <div class="pub-title">
+            Computational Analysis of Vaporizer Mechanical Design and Its Influence on Inhalation Resistance
+          </div>
+
+          <div class="pub-venue">
+            ASME Fluids Engineering Division Summer Meeting · 
+            <span>FEDSM 2026</span> · Bellevue, WA
+          </div>
+        </div>
+
         <div class="pub-arr">View Details ↗</div>
       </div>
+
+      <!-- Publication 3 -->
+      <div class="pub" data-modal="pub3">
+        <div>
+          <div class="pub-sr">
+            <div class="pub-sdot"></div>
+            <div class="pub-status">Accepted · ASME FEDSM 2026</div>
+          </div>
+
+          <div class="pub-title">
+            Fluid-Structure Interaction Effects on Payload Deflection and Tip-Over Stability in Mobile Cranes Under Wind Loading
+          </div>
+
+          <div class="pub-venue">
+            ASME Fluids Engineering Division Summer Meeting · 
+            <span>FEDSM 2026</span> · Bellevue, WA
+          </div>
+        </div>
+
+        <div class="pub-arr">View Details ↗</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -530,9 +595,93 @@ const MD={
   p4:{tag:'Project · 04 · Thermal · FEA',title:'RELIABILITY ASSESSMENT OF HPC CHIP SOLDER JOINTS',sub:'Mar – Apr 2025 · Georgia Tech',metrics:[{v:'10k+',l:'Predicted Cycles'},{v:'2.5D',l:'Package Modeled'},{v:'FEA',l:'Validated vs. Lit.'}],overview:'Modeled a 2D/2.5D advanced semiconductor package in ANSYS to predict solder joint fatigue life under cyclic thermal loading — critical for high-performance computing and data center reliability.',details:['Built coupled thermal-structural FEA model capturing die, underfill, substrate, PCB, and solder interconnects in a 2.5D stacked architecture','Performed cyclic thermal fatigue simulations (−40°C to +125°C); validated with mesh convergence and published literature benchmarks','Applied both Kanchanomai and Anderson fatigue life models; predicted solder joint life exceeding 10,000 cycles under forced convection cooling','Identified critical solder joints at package corners as primary failure sites — consistent with published literature'],tools:['ANSYS Mechanical','ANSYS Thermal','Kanchanomai Model','Anderson Model','FEA'],img:true},
   p5:{tag:'Project · 05 · CHT · Multiphase',title:'PINTLE INJECTOR MULTIPHASE FLOW MODEL',sub:'May – Aug 2025 · LiquidPiston, Inc. · Bloomfield, CT',metrics:[{v:'<1%',l:'Mass Flow Error'},{v:'<2%',l:'Lift Error'},{v:'CHT',l:'Coupled'}],overview:'Advanced an existing pintle injector multiphase CFD model (originally from SAE 2023 work) to capture coupled fluid-thermal behavior, significantly improving predictive fidelity for LiquidPiston\'s rotary engine program.',details:['Extended base model to include conjugate heat transfer coupling between the injector body and internal flow field','Optimized boundary conditions, meshing strategy, and solver settings to achieve <1% error in mass flow rate predictions','Achieved <2% error in needle lift tracking across the full operational envelope','Results directly informed injector design iterations and feed back into the broader engine simulation framework'],tools:['ANSYS Fluent','Multiphase VOF','CHT Coupling','User-Defined Functions (UDF)'],img:true},
   p6:{tag:'Project · 06 · Leadership · SAE',title:'FORMULA BAJA SAE INDIA — TEAM CAPTAIN',sub:'Aug 2021 – Jan 2024 · PSG College of Technology · Coimbatore, India',metrics:[{v:'Top 10',l:'of 80 Teams'},{v:'25',l:'Members Led'},{v:'4WD',l:'ATV Built'}],overview:'Led the full design, analysis, fabrication, and competition campaign for Team Baja Bhais — PSG College of Technology\'s Baja SAE India entry — achieving a national top-10 finish across three competition seasons.',details:['Directed design and development of a 4WD all-terrain vehicle with personal ownership of suspension and steering system optimization','Used ANSYS for structural analysis of critical chassis and suspension components; SolidWorks and CATIA for parametric modeling','Managed a 25-member interdisciplinary team across design, fabrication, and documentation tracks over 3 years','Achieved top 10 finish at Baja SAE India among 80 competing national teams'],tools:['SolidWorks','ANSYS Mechanical','CATIA','Creo','Vehicle Dynamics Analysis'],img:true},
-  pub1:{tag:'Publication · ASME FEDSM 2026',title:'CFD METHODOLOGY AND REDUCED-ORDER MODEL FOR WIND LOAD PREDICTION ON TOWER CRANES',sub:'ASME Fluids Engineering Division Summer Meeting · 2026 · Status: Accepted, Under Review',metrics:[{v:'ASME',l:'Publisher'},{v:'2026',l:'Year'},{v:'FEDSM',l:'Conference'}],overview:'This paper presents a systematic CFD methodology for predicting wind loads on tower cranes using steady RANS simulations with atmospheric boundary layer inflow. A validated reduced-order model is developed to correlate aerodynamic loads with crane geometric parameters.',details:['Establishes best-practice meshing, boundary condition, and turbulence model selection for tower crane aerodynamics (k-ω SST RANS)','Introduces and validates an area-based decomposition approach to characterize aerodynamic exposure in open lattice structures','Presents a reduced-order model achieving <3% error vs. high-fidelity CFD across the full geometric parameter space','Results applicable to crane safety standard development and load estimation for structural design calculations'],tools:['OpenFOAM','Python','PACE HPC','ParaView','k-ω SST RANS'],img:false},
-  pub2:{tag:'Publication · ASME FEDSM 2026',title:'AERODYNAMIC EXPOSURE QUANTIFICATION IN LATTICE TOWER STRUCTURES VIA AREA-BASED DECOMPOSITION',sub:'ASME Fluids Engineering Division Summer Meeting · 2026 · Status: Accepted, Under Review',metrics:[{v:'ASME',l:'Publisher'},{v:'2026',l:'Year'},{v:'Novel',l:'Method'}],overview:'Introduces a novel area-based decomposition methodology for systematically quantifying aerodynamic exposure levels within lattice tower structures, enabling rapid aerodynamic screening without full CFD runs.',details:['Proposes a geometric decomposition framework mapping local member orientation and area to directional wind exposure indices','Method validated against full-structure RANS CFD, showing strong correlation with surface pressure distributions','Enables rapid aerodynamic screening of lattice configurations without requiring full CFD for every geometry variant','Framework is generalizable to any open-lattice structure subject to atmospheric wind loading'],tools:['OpenFOAM','Python','PACE HPC','Geometric Analysis Scripts'],img:false}
-};
+  pub1:{
+    tag:'Publication · ASME FEDSM 2026',
+    title:'COMPUTATIONAL AND EMPIRICAL FRAMEWORK FOR DIRECTIONAL WIND LOAD PREDICTION ON PARTIALLY ASSEMBLED TOWER CRANES',
+    sub:'ASME Fluids Engineering Division Summer Meeting (FEDSM 2026) · Bellevue, WA · Accepted',
+    metrics:[
+      {v:'RANS CFD',l:'ABL Simulations'},
+      {v:'SST k-ω',l:'Turbulence Model'},
+      {v:'Empirical',l:'Reduced-Order Model'}
+    ],
+    overview:'This paper presents a CFD-based and empirical framework for predicting wind-induced loading on partially assembled tower crane masts during assembly and disassembly operations. Steady Reynolds-Averaged Navier-Stokes (RANS) simulations with Atmospheric Boundary Layer inflow are used to quantify the effects of wind direction, mast height, and operator cab presence on aerodynamic loading.',
+    details:[
+      'Performed steady RANS CFD simulations using the SST k-ω turbulence model under realistic Atmospheric Boundary Layer inflow conditions',
+      'Quantified the influence of wind direction, mast height, and operator cab presence on drag forces and overturning moments using parametric simulations',
+      'Observed increased stagnation and flow separation near the operator cab at oblique wind angles, leading to amplified aerodynamic loading',
+      'Introduced an area-based aerodynamic decomposition methodology to quantify exposed, partially shielded, and wake-affected regions within lattice tower structures',
+      'Developed an empirical reduced-order model capable of predicting aerodynamic drag and overturning moments with less than 3% error relative to CFD results',
+      'Framework supports improved crane safety assessment and rapid wind load estimation for partially assembled tower crane configurations'
+    ],
+    tools:[
+      'ANSYS Fluent',
+      'CFD',
+      'RANS',
+      'SST k-ω',
+      'Atmospheric Boundary Layer (ABL)',
+      'Reduced-Order Modeling'
+    ],
+    img:false
+  },
+
+  pub2:{
+    tag:'Publication · ASME FEDSM 2026',
+    title:'COMPUTATIONAL ANALYSIS OF VAPORIZER MECHANICAL DESIGN AND ITS INFLUENCE ON INHALATION RESISTANCE',
+    sub:'ASME Fluids Engineering Division Summer Meeting (FEDSM 2026) · Bellevue, WA · Accepted',
+    metrics:[
+      {v:'Species',l:'Transport Modeling'},
+      {v:'ISO',l:'Inhalation Conditions'},
+      {v:'Porous',l:'Wick Modeling'}
+    ],
+    overview:'This work presents a CFD-based investigation of airflow, vapor-air mixing, and inhalation resistance in a representative consumer-grade vaporizer adapted for therapeutic drug delivery applications. The study evaluates the influence of inlet geometry, cartridge diameter, and altitude on pressure loss and dose consistency.',
+    details:[
+      'Simulated vapor-air mixing and inhalation flow physics using CFD with SST k-ω turbulence and species transport modeling',
+      'Modeled the vaporizer wick as a porous medium with prescribed vapor mass flow rate',
+      'Investigated the effects of inlet obstruction, inlet location, cartridge hole diameter, and operating altitude on inhalation resistance',
+      'Observed that cartridge diameter strongly governs pressure drop and internal flow distribution',
+      'Demonstrated that altitude-induced ambient pressure reduction directly affects inhaled dose consistency and internal pressure fields',
+      'Provides design guidance for robust medical-grade vaporizers with predictable inhalation resistance and aerosol delivery'
+    ],
+    tools:[
+      'ANSYS Fluent',
+      'Species Transport',
+      'Porous Media Modeling',
+      'CFD',
+      'SST k-ω',
+      'Medical Device Flow Simulation'
+    ],
+    img:false
+  },
+
+  pub3:{
+    tag:'Publication · ASME FEDSM 2026',
+    title:'FLUID-STRUCTURE INTERACTION EFFECTS ON PAYLOAD DEFLECTION AND TIP-OVER STABILITY IN MOBILE CRANES UNDER WIND LOADING',
+    sub:'ASME Fluids Engineering Division Summer Meeting (FEDSM 2026) · Bellevue, WA · Accepted', 
+    metrics:[
+      {v:'RANS CFD',l:'ABL Simulations'},
+      {v:'SST k-ω',l:'Turbulence Model'},
+      {v:'FSI',l:'One-Way Coupling'},
+    ],
+    overview:'This paper investigates wind-induced stability and overturning behavior in mobile cranes using a coupled CFD and one-way fluid-structure interaction framework. The study quantifies how payload geometry, wind direction, and deformation-dependent effects influence crane tip-over stability under mean wind loading.',
+    details:[
+      'Developed a one-way CFD-FSI framework coupling steady aerodynamic loads with quasi-static structural response analysis',
+      'Performed high-fidelity CFD simulations with meshes exceeding 27 million elements using SST k-ω turbulence modeling',
+      'Quantified the effects of wind direction, wind velocity, payload geometry, and payload deformation on overturning moments',
+      'Observed that crosswind loading produces substantially larger overturning moments compared to along-wind loading conditions',
+      'Demonstrated that deformation-induced payload displacement amplifies effective aerodynamic moment arms and crane instability',
+      'Validated analytical moment transformations against ANSYS results with errors below 0.5% across all investigated wind speeds',
+      'Highlights limitations of conventional equivalent-static wind load methods for crane stability assessment'
+    ],
+    tools:[
+      'ANSYS Fluent',
+      'ANSYS Mechanical',
+      'CFD-FSI',
+      'SST k-ω',
+      'Structural Mechanics',
+      'Wind Load Analysis'
+    ],
+    img:false
+  }};
 
 function openModal(id){
   const d=MD[id];if(!d)return;
