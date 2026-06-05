@@ -225,6 +225,14 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 .m-is span{font-family:var(--mono);font-size:.68rem;color:var(--ink2);font-weight:600}
 .m-is small{font-family:var(--mono);font-size:.62rem;color:var(--ink2);opacity:.6;text-align:center;padding:0 .5rem}
 
+.mi-ph img,
+.m-is img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 @media(max-width:768px){
   nav{padding:0 1.2rem}
   .nav-links{display:none}
@@ -648,7 +656,13 @@ const MD={
       'Atmospheric Boundary Layer (ABL)',
       'Reduced-Order Modeling'
     ],
-    img:true
+    img:'images/Tower_Crane_Poster.png',
+    gallery:[
+      'images/tower-crane-geometry.png',
+      'images/tower-crane-cfd.png',
+      'images/tower-crane-area-decomp.png',
+      'images/tower-crane-model-validation.png'
+    ],
   },
   pub2:{
     tag:'Publication · ASME FEDSM 2026',
@@ -714,7 +728,7 @@ function openModal(id){
   document.getElementById('mc-tag').textContent=d.tag;
   const b=document.getElementById('mb');
   b.innerHTML=`
-    ${d.img?`<div class="mi-ph"><span>// Drop your main project image here</span><small>Replace with: &lt;img src="your-image.jpg" style="width:100%;height:100%;object-fit:cover"&gt;</small></div>`:''}
+    ${d.img?`<div class="mi-ph"><img src="${d.img}" alt="${d.title} main image"></div>`:''}
     <div class="m-tag">${d.tag}</div>
     <div class="m-title">${d.title}</div>
     <div class="m-sub">${d.sub}</div>
@@ -725,18 +739,17 @@ function openModal(id){
     <ul class="m-ul">${d.details.map(x=>`<li>${x}</li>`).join('')}</ul>
     <div class="m-sl">Tools & Methods</div>
     <div class="m-tw">${d.tools.map(t=>`<span class="m-tool">${t}</span>`).join('')}</div>
-    ${d.img?`<div class="m-sl">Images & Figures</div>
+    ${d.gallery?`<div class="m-sl">Images & Figures</div>
     <div class="m-ig">
-      <div class="m-is"><span>Image / Render 1</span><small>Replace with &lt;img&gt; tag</small></div>
-      <div class="m-is"><span>Image / Render 2</span><small>Replace with &lt;img&gt; tag</small></div>
-      <div class="m-is"><span>Poster / Figure 3</span><small>Replace with &lt;img&gt; tag</small></div>
-      <div class="m-is"><span>Result / Plot 4</span><small>Replace with &lt;img&gt; tag</small></div>
+      ${d.gallery.map((img,i)=>`<div class="m-is"><img src="${img}" alt="${d.title} figure ${i+1}"></div>`).join('')}
     </div>`:''}
   `;
   document.getElementById('mo').classList.add('open');
   document.body.style.overflow='hidden';
   b.scrollTop=0;
 }
+
+
 function closeModal(){document.getElementById('mo').classList.remove('open');document.body.style.overflow=''}
 document.querySelectorAll('[data-modal]').forEach(el=>el.addEventListener('click',()=>openModal(el.dataset.modal)));
 document.getElementById('mc-btn').addEventListener('click',closeModal);
