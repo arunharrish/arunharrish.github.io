@@ -199,7 +199,10 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 .mc-btn:hover{border-color:var(--blue);color:var(--blue)}
 .mb{padding:2rem 2rem 3rem;overflow-y:auto}
 .mi-ph{
-  width:100%;height:220px;background:var(--bg3);
+  width:100%;
+  height: auto;
+  aspect-ratio:4/3;
+  background:var(--bg3);
   border:1px dashed var(--line);
   display:flex;align-items:center;justify-content:center;
   margin-bottom:1.5rem;flex-direction:column;gap:.5rem
@@ -229,7 +232,7 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 .m-is img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain;
   display:block;
 }
 
@@ -690,7 +693,12 @@ const MD={
       'SST k-ω',
       'Medical Device Flow Simulation'
     ],
-    img:true
+    gallery:[
+      'images/tower-crane-geometry.png',
+      'images/tower-crane-cfd.png',
+      'images/tower-crane-area-decomp.png',
+      'images/tower-crane-model-validation.png'
+    ],
   },
   pub3:{
     tag:'Publication · ASME FEDSM 2026',
@@ -719,7 +727,13 @@ const MD={
       'Structural Mechanics',
       'Wind Load Analysis'
     ],
-    img:true
+    img:'images/Mobile_Crane_Poster.png',
+    gallery:[
+      'images/tower-crane-geometry.png',
+      'images/tower-crane-cfd.png',
+      'images/tower-crane-area-decomp.png',
+      'images/tower-crane-model-validation.png'
+    ],
   }
 };
 
