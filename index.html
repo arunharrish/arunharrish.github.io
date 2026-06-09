@@ -477,7 +477,7 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
       <div class="pc" data-modal="p1"><div class="pc-num">01 · STRUCTURAL OPTIMIZATION</div><div class="pc-title">MULTI-OBJECTIVE FORMULA SAE CHASSIS OPTIMIZATION</div><div class="pc-desc">Surrogate-driven optimization of a 21-variable parametric chassis using FEA, Gaussian Process Regression, and NSGA-II to balance mass, stiffness, and structural constraints.</div><div class="pc-chips"><span class="chip">15–25% lighter</span><span class="chip">&gt;7k Nm/deg stiffness</span><span class="chip">&lt;3% error</span></div><div class="pc-tools"><span class="tl">SolidWorks</span><span class="tl">ANSYS Mechanical</span><span class="tl">MATLAB</span><span class="tl">GPR</span><span class="tl">NSGA-II</span></div><div class="pc-open">Open ↗</div></div>
       <div class="pc" data-modal="p2"><div class="pc-num">02 · THERMAL-MECHANICAL FEA</div><div class="pc-title">HPC CHIP SOLDER JOINT RELIABILITY</div><div class="pc-desc">Coupled transient thermal and nonlinear structural FEA of a 2D/2.5D chip package to predict viscoplastic strain accumulation and solder-joint fatigue under cyclic power loading.</div><div class="pc-chips"><span class="chip">~10,000+ cycles</span><span class="chip">50% lower peak stress</span></div><div class="pc-tools"><span class="tl">ANSYS Thermal</span><span class="tl">ANSYS Mechanical</span><span class="tl">Anand Model</span><span class="tl">Fatigue Analysis</span></div><div class="pc-open">Open ↗</div></div>
       <div class="pc" data-modal="p3"><div class="pc-num">03 · STRUCTURAL · RBDO</div><div class="pc-title">RELIABILITY-BASED SAE BAJA KNUCKLE OPTIMIZATION</div><div class="pc-desc">Deterministic and reliability-based optimization of an Aluminum 7075-T6 rear knuckle using FEA-derived Ridge/Lasso surrogates, FORM, and Monte Carlo validation.</div><div class="pc-chips"><span class="chip">37.9% lighter</span><span class="chip">99.984% reliability</span><span class="chip">R² ≥ 0.989</span></div><div class="pc-tools"><span class="tl">MATLAB</span><span class="tl">ANSYS Mechanical</span><span class="tl">Ridge/Lasso</span><span class="tl">FORM</span><span class="tl">Monte Carlo Simulation</span></div><div class="pc-open">Open ↗</div></div>
-      <div class="pc" data-modal="p4"><div class="pc-num">04 · THERMAL · FEA</div><div class="pc-title">HPC CHIP SOLDER JOINT RELIABILITY</div><div class="pc-desc">Coupled thermal-structural FEA of 2D/2.5D semiconductor packages. Cyclic fatigue validated against literature.</div><div class="pc-chips"><span class="chip">~10,000+ cycles</span><span class="chip">2.5D package</span></div><div class="pc-tools"><span class="tl">ANSYS</span><span class="tl">Thermal-Structural</span><span class="tl">FEA</span></div><div class="pc-open">Open ↗</div></div>
+      <div class="pc" data-modal="p4"><div class="pc-num">04 · CFD · LAMINAR</div><div class="pc-title">FLOW ANALYSIS OF TOWER CRANE TRUSS SECTIONS</div><div class="pc-desc">2D steady and transient COMSOL analysis of separation, wake shielding, bound vortices, and vortex shedding across Reynolds numbers from 1 to 200.</div><div class="pc-chips"><span class="chip">~30% wake shielding</span><span class="chip">20–25% higher drag at 45°</span></div><div class="pc-tools"><span class="tl">COMSOL</span><span class="tl">Laminar CFD</span><span class="tl">Transient Flow</span><span class="tl">Vortex Shedding</span></div><div class="pc-open">Open ↗</div></div>
       <div class="pc" data-modal="p5"><div class="pc-num">05 · CHT · MULTIPHASE</div><div class="pc-title">PINTLE INJECTOR MULTIPHASE FLOW</div><div class="pc-desc">Advanced multiphase CFD model for pintle injector at LiquidPiston. Sub-1% mass flow and sub-2% lift error.</div><div class="pc-chips"><span class="chip">&lt;1% mass flow error</span><span class="chip">&lt;2% lift error</span></div><div class="pc-tools"><span class="tl">Fluent</span><span class="tl">Multiphase VOF</span><span class="tl">CHT</span></div><div class="pc-open">Open ↗</div></div>
       <div class="pc" data-modal="p6"><div class="pc-num">06 · LEADERSHIP · SAE</div><div class="pc-title">BAJA SAE INDIA — TEAM CAPTAIN</div><div class="pc-desc">Led 25-member team in full 4WD ATV design and build. Optimized suspension via CAD/CAE. Top 10 nationally.</div><div class="pc-chips"><span class="chip">Top 10 / 80 teams</span><span class="chip">25 members led</span></div><div class="pc-tools"><span class="tl">SolidWorks</span><span class="tl">ANSYS</span><span class="tl">CATIA</span></div><div class="pc-open">Open ↗</div></div>
     </div>
@@ -630,7 +630,7 @@ const MD={
   p1:{
     tag:'Project · 01 · Structural Optimization',
     title:'MULTI-OBJECTIVE OPTIMIZATION OF FORMULA SAE CHASSIS',
-    sub:'Jan – Apr 2025 · Georgia Tech · ME 6103 Engineering Design',
+    sub:'Jan – Apr 2025 · Georgia Tech · ME 6103 Optimization In Engineering Design',
     metrics:[ {v:'15–25%',l:'Mass Reduction'}, {v:'6.5k–10.2k',l:'Nm/deg Optimized Stiffness'}, {v:'<3%',l:'Surrogate Prediction Error'} ],
     overview:'Developed a surrogate-driven multi-objective optimization framework for a Formula SAE electric-vehicle space-frame chassis. A parametric CAD model with 21 geometric, tube-size, and material variables was evaluated using quasi-static FEA under frontal impact, side impact, and torsional loading, then optimized for minimum mass and maximum torsional stiffness subject to structural, ergonomic, packaging, and competition-rule constraints.',
     details:[
@@ -701,15 +701,10 @@ metrics:[ {v:'40%',l:'Lower Peak Temperature'}, {v:'50%',l:'Lower Peak Stress'},
     overview:'Developed deterministic and reliability-based design optimization frameworks for an Aluminum 7075-T6 SAE Baja rear suspension knuckle. FEA-derived surrogate models were used to minimize unsprung mass while enforcing stress, deformation, safety-factor, and probabilistic reliability constraints under combined bump and braking loads.',
     details:[
       'Parameterized five geometric variables controlling knuckle thickness and upper- and lower-slot dimensions, reducing the design mass from 717.1 g to 447.5 g',
-
       'Performed ANSYS FEA under a 9.2 kN bump load and 61.4 N·m brake torque, evaluating von Mises stress, deformation, fatigue life, and safety factor',
-
       'Generated 20 Latin Hypercube samples and trained Ridge and Lasso regression surrogates with R² values from 0.989 to 0.998 for mass and structural responses',
-
       'Implemented an exterior-penalty deterministic optimizer in MATLAB, converging in eight iterations while satisfying stress, deformation, and safety-factor constraints',
-
       'Developed a double-loop RBDO framework using FORM and the Hasofer–Lind reliability index to account for geometric and loading uncertainty',
-
       'Achieved a reliability index of β = 3.57 and a predicted failure probability of 0.016%, verified independently using Monte Carlo simulation'
     ],
     tools:[
@@ -722,16 +717,49 @@ metrics:[ {v:'40%',l:'Lower Peak Temperature'}, {v:'50%',l:'Lower Peak Stress'},
       'Ridge Regression',
       'Lasso Regression'
     ],
-    img:'images/HPC_Chip_Poster.png',
+    img:'images/RBDO_Knuckle_flowchart.png',
     gallery:[
-      'images/HPC_Chip_Mesh.png',
-      'images/HPC_Chip_Temp.png',
-      'images/HPC_Chip_Stress.png',
-      'images/HPC_Chip_Strain.png'
+      'images/RBDO_Knuckle_geometry.png',
+      'images/RBDO_Knuckle_Stress.png',
+      'images/RBDO_Knuckle_Validation.png',
+      'images/RBDO_Knuckle_Optimized.png'
     ],
   },
-  p4:{tag:'Project · 04 · Thermal · FEA',title:'RELIABILITY ASSESSMENT OF HPC CHIP SOLDER JOINTS',sub:'Mar – Apr 2025 · Georgia Tech',metrics:[{v:'10k+',l:'Predicted Cycles'},{v:'2.5D',l:'Package Modeled'},{v:'FEA',l:'Validated vs. Lit.'}],overview:'Modeled a 2D/2.5D advanced semiconductor package in ANSYS to predict solder joint fatigue life under cyclic thermal loading — critical for high-performance computing and data center reliability.',details:['Built coupled thermal-structural FEA model capturing die, underfill, substrate, PCB, and solder interconnects in a 2.5D stacked architecture','Performed cyclic thermal fatigue simulations (−40°C to +125°C); validated with mesh convergence and published literature benchmarks','Applied both Kanchanomai and Anderson fatigue life models; predicted solder joint life exceeding 10,000 cycles under forced convection cooling','Identified critical solder joints at package corners as primary failure sites — consistent with published literature'],tools:['ANSYS Mechanical','ANSYS Thermal','Kanchanomai Model','Anderson Model','FEA'],img:true},
-  p5:{tag:'Project · 05 · CHT · Multiphase',title:'PINTLE INJECTOR MULTIPHASE FLOW MODEL',sub:'May – Aug 2025 · LiquidPiston, Inc. · Bloomfield, CT',metrics:[{v:'<1%',l:'Mass Flow Error'},{v:'<2%',l:'Lift Error'},{v:'CHT',l:'Coupled'}],overview:'Advanced an existing pintle injector multiphase CFD model (originally from SAE 2023 work) to capture coupled fluid-thermal behavior, significantly improving predictive fidelity for LiquidPiston\'s rotary engine program.',details:['Extended base model to include conjugate heat transfer coupling between the injector body and internal flow field','Optimized boundary conditions, meshing strategy, and solver settings to achieve <1% error in mass flow rate predictions','Achieved <2% error in needle lift tracking across the full operational envelope','Results directly informed injector design iterations and feed back into the broader engine simulation framework'],tools:['ANSYS Fluent','Multiphase VOF','CHT Coupling','User-Defined Functions (UDF)'],img:true},
+  p4:{
+    tag:'Project · 04 · CFD · COMSOL',
+    title:'FLOW ANALYSIS OF TOWER CRANE TRUSS SECTIONS',
+    sub:'Spring 2025 · Georgia Tech · ME 4342 Computational Fluid Dynamics',
+    metrics:[
+      {v:'~30%',l:'Wake-Shielding Drag Reduction'},
+      {v:'20–25%',l:'Drag Increase at 45°'},
+      {v:'St = 0.16',l:'Vortex-Shedding Frequency'}
+    ],
+    overview:'Developed a two-dimensional COMSOL CFD model to study the fundamental flow physics around a simplified tower-crane lattice section. The analysis examined flow separation, wake shielding, bound-vortex formation, vortex shedding, Reynolds-number sensitivity, and angle-of-attack effects for four square structural members.',
+    details:[
+      'Solved the steady and unsteady incompressible Navier–Stokes equations for Reynolds numbers from 1 to 200 at 0° and 45° angles of attack',
+      'Designed an extended computational domain with 20 characteristic lengths upstream and laterally and 80 lengths downstream to minimize boundary interference',
+      'Identified the onset of bound vortices near Re ≈ 3 and periodic vortex shedding above Re ≈ 108.5',
+      'Predicted a Strouhal number of 0.16 and a drag coefficient of 1.28 near Re ≈ 50, closely matching published square-cylinder data',
+      'Found downstream tubes experienced approximately 30% lower drag but up to 250% greater lift because of wake shielding and vortex interaction',
+      'Demonstrated that rotating the truss section to 45° increased drag by approximately 20–25% while reducing lift by about one order of magnitude'
+    ],
+    tools:[
+      'COMSOL Multiphysics',
+      'Laminar Flow',
+      'Unsteady CFD',
+      'Navier–Stokes Equations',
+      'Vortex Shedding',
+      'Flow Visualization'
+    ],
+    img:'images/Vortex_Truss_Poster.png',
+    gallery:[
+      'images/Vortex_Truss_LowRe.png',
+      'images/Vortex_Truss_Drag.png',
+      'images/Vortex_Truss_Streamlines.png',
+      'images/Vortex_Truss_Shedding.png',
+    ],
+  },
+ p5:{tag:'Project · 05 · CHT · Multiphase',title:'PINTLE INJECTOR MULTIPHASE FLOW MODEL',sub:'May – Aug 2025 · LiquidPiston, Inc. · Bloomfield, CT',metrics:[{v:'<1%',l:'Mass Flow Error'},{v:'<2%',l:'Lift Error'},{v:'CHT',l:'Coupled'}],overview:'Advanced an existing pintle injector multiphase CFD model (originally from SAE 2023 work) to capture coupled fluid-thermal behavior, significantly improving predictive fidelity for LiquidPiston\'s rotary engine program.',details:['Extended base model to include conjugate heat transfer coupling between the injector body and internal flow field','Optimized boundary conditions, meshing strategy, and solver settings to achieve <1% error in mass flow rate predictions','Achieved <2% error in needle lift tracking across the full operational envelope','Results directly informed injector design iterations and feed back into the broader engine simulation framework'],tools:['ANSYS Fluent','Multiphase VOF','CHT Coupling','User-Defined Functions (UDF)'],img:true},
   p6:{tag:'Project · 06 · Leadership · SAE',title:'FORMULA BAJA SAE INDIA — TEAM CAPTAIN',sub:'Aug 2021 – Jan 2024 · PSG College of Technology · Coimbatore, India',metrics:[{v:'Top 10',l:'of 80 Teams'},{v:'25',l:'Members Led'},{v:'4WD',l:'ATV Built'}],overview:'Led the full design, analysis, fabrication, and competition campaign for Team Baja Bhais — PSG College of Technology\'s Baja SAE India entry — achieving a national top-10 finish across three competition seasons.',details:['Directed design and development of a 4WD all-terrain vehicle with personal ownership of suspension and steering system optimization','Used ANSYS for structural analysis of critical chassis and suspension components; SolidWorks and CATIA for parametric modeling','Managed a 25-member interdisciplinary team across design, fabrication, and documentation tracks over 3 years','Achieved top 10 finish at Baja SAE India among 80 competing national teams'],tools:['SolidWorks','ANSYS Mechanical','CATIA','Creo','Vehicle Dynamics Analysis'],img:true},
   pub1:{
     tag:'Publication · ASME FEDSM 2026',
