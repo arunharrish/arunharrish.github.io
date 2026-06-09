@@ -98,8 +98,12 @@ section{position:relative;z-index:1}
 .te-ul li{font-size:1rem;color:var(--ink);line-height:1.7;padding-left:1.2rem;position:relative;margin-bottom:.32rem}
 .te-ul li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:.7rem;top:.06rem}
 #projects{background:var(--bg2)}
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--line2)}
-.pc{background:var(--bg);padding:1.6rem;cursor:pointer;position:relative;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s,background .25s}
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:1px;
+  background:var(--line2);
+}.pc{background:var(--bg);padding:1.6rem;cursor:pointer;position:relative;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s,background .25s}
 .pc.vis{opacity:1;transform:translateY(0)}
 .pc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .pc:hover{background:var(--bg3)}
@@ -420,49 +424,70 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 
 <section id="experience">
   <div class="sw">
-    <div class="sh reveal"><div class="sh-eye">Experience</div><div class="sh-title">WORK &<br>RESEARCH</div><div class="sh-rule"><div class="sh-line"></div><div class="sh-meta">Industry · Research · Product Development</div></div></div>
+    <div class="sh reveal"><div class="sh-eye">Experience</div><div class="sh-title">WORK & RESEARCH</div><div class="sh-rule"><div class="sh-line"></div><div class="sh-meta">Industry · Research · Product Development</div></div></div>
 
     <div class="timeline">
 
-      <div class="te">
-        <div class="te-ring"></div><div class="te-dot"></div>
-        <div class="te-date">Jan 2025 – Present</div>
-        <div class="te-role">GRADUATE RESEARCH ASSISTANT</div>
-        <div class="te-co">Georgia Institute of Technology · Crane Safety Research Center · Atlanta, GA</div>
-        <ul class="te-ul">
-          <li>Developed parametric steady RANS CFD models for predicting wind loads on tower cranes under atmospheric boundary layer inflow conditions</li>
-          <li>Automated large-scale CFD workflows through scripting and executed batch simulations on Georgia Tech PACE HPC clusters</li>
-          <li>Designed an area-based aerodynamic decomposition framework to quantify exposure and shielding effects within lattice structures</li>
-          <li>Built and validated a reduced-order aerodynamic model correlating geometric parameters with CFD loads, achieving &lt;3% prediction error</li>
-          <li>Authored and presented research on simulation-driven wind load prediction and model reduction strategies for ASME FEDSM 2026</li>
-        </ul>
-      </div>
 
-      <div class="te">
-        <div class="te-ring"></div><div class="te-dot"></div>
-        <div class="te-date">May 2025 – Aug 2025</div>
-        <div class="te-role">MODELING & SIMULATION INTERN</div>
-        <div class="te-co">LiquidPiston, Inc. · Bloomfield, CT</div>
-        <ul class="te-ul">
-          <li>Performed conjugate heat transfer simulations on coolant jackets and cold-start heater systems to identify thermal hotspots and validate heat balance performance</li>
-          <li>Developed CFD-based resistance models for coolant flow balancing, reducing mass flux imbalance from 37% to 17% through restrictor-based design modifications</li>
-          <li>Built and calibrated 0D/1D GT-Power models for rotor oil paths and auxiliary oil pump systems, matching experimental pressure drop data within 3%</li>
-          <li>Rebuilt and extended a multiphase pintle injector model using custom fit functions and calibration approaches, achieving &lt;1% mass flow error and accurate lift tracking</li>
-          <li>Proposed fin geometry modifications for a cold-start heater system, increasing temperature rise by 50% and improving overall heater performance</li>
-        </ul>
-      </div>
+    <div class="te">
+      <div class="te-ring"></div><div class="te-dot"></div>
+      <div class="te-date">Aug 2025 – Present</div>
+      <div class="te-role">GRADUATE RESEARCH ASSISTANT</div>
+      <div class="te-co">Georgia Institute of Technology · Crane Safety Research Center · Atlanta, GA</div>
+      <ul class="te-ul">
+        <li>Developed parametric steady RANS CFD models in ANSYS Fluent to predict directional wind loads on isolated and partially enveloped tower cranes under logarithmic atmospheric boundary layer inflow</li>
+        <li>Automated geometry, meshing, solver, and post-processing workflows for large parametric studies and executed high-resolution simulations on Georgia Tech PACE HPC clusters</li>
+        <li>Created a MATLAB-based area-decomposition algorithm that classifies lattice surfaces into first-contact, second-contact, and shielded regions to quantify aerodynamic exposure and wake interaction</li>
+        <li>Developed reduced-order models for drag, overturning moment, center-of-pressure location, and section-wise load distribution, achieving approximately 3% validation error for global aerodynamic loads</li>
+        <li>Extended the framework to crane–building configurations using section-wise shielding and wake multipliers, predicting total drag with R² greater than 0.98 and less than 3.3% validation error</li>
+        <li>Authored accepted papers for ASME FEDSM 2026 and EURODYN 2026 on directional wind loading, crane–building interaction, and physics-informed aerodynamic model reduction</li>
+      </ul>
+    </div>
 
-      <div class="te">
-        <div class="te-ring"></div><div class="te-dot"></div>
-        <div class="te-date">Jun 2023 – Apr 2024</div>
-        <div class="te-role">NEW PRODUCT DEVELOPMENT INTERN</div>
-        <div class="te-co">Bull Machines Pvt. Ltd. · Coimbatore, India</div>
-        <ul class="te-ul">
-          <li>Led a 3-member team in redesigning a hydraulic reservoir system, achieving a 50% reduction in volume and 35% reduction in manufacturing cost</li>
-          <li>Used CFD streamline analysis to improve internal flow stability and reduce turbulence-related oil instability</li>
-          <li>Validated the redesigned system through prototype testing, achieving 92% correlation with ANSYS Fluent simulation results</li>
-        </ul>
-      </div>
+    <div class="te">
+      <div class="te-ring"></div><div class="te-dot"></div>
+      <div class="te-date">May 2025 – Aug 2025</div>
+      <div class="te-role">MODELING &amp; SIMULATION INTERN</div>
+      <div class="te-co">LiquidPiston, Inc. · Bloomfield, CT</div>
+      <ul class="te-ul">
+        <li>Performed conjugate heat transfer analysis of an engine coolant jacket, identified thermal hotspots, evaluated heat balance, and matched the simulated pressure-drop curve to experimental data within 5%</li>
+        <li>Developed and calibrated a GT-POWER model of an auxiliary oil pump, accurately reproducing measured flow-rate behavior across most of the operating range and identifying limitations in the available torque data</li>
+        <li>Built 0D and 1D GT-POWER models of the rotor oil circuit and optimized distributed friction multipliers to reproduce the experimental pressure-drop curve within 3%</li>
+        <li>Supported development of a 5 kW cold-start heater by fitting experimental data to extract thermal boundary conditions and performing CHT validation; the evaluated design delivered approximately 3 kW of heat transfer</li>
+        <li>Developed CFD and hydraulic-resistance models for coolant-jacket passages, calculated resistance and loss coefficients, and proposed restrictor-orifice and cross-sectional-area modifications that reduced flow imbalance from 37% to 17%</li>
+        <li>Extended a published multiphase pintle-injector model and optimized its calibration, achieving less than 1% mass-flow error and less than 2% integrated needle-lift tracking error</li>
+      </ul>
+    </div>
+
+    <div class="te">
+      <div class="te-ring"></div><div class="te-dot"></div>
+      <div class="te-date">Jun 2024 – Apr 2024</div>
+      <div class="te-role">NEW PRODUCT DEVELOPMENT INTERN</div>
+      <div class="te-co">Bull Machines Pvt. Ltd. · Coimbatore, India</div>
+      <ul class="te-ul">
+        <li>Worked within the new product development team to redesign an oversized 120 L hydraulic reservoir for a backhoe loader using CAD, multiphase CFD, structural analysis, and prototype testing</li>
+        <li>Developed and evaluated three compact reservoir concepts using particle pathlines, velocity non-uniformity, air-volume-fraction contours, structural stress, and deaeration performance</li>
+        <li>Applied a control-point-based velocity metric to optimize reservoir dimensions and selected a design with smoother internal circulation, reduced turbulence, and improved air-release behavior</li>
+        <li>Reduced hydraulic-oil volume by 50%, tank weight by 35%, and estimated manufacturing cost by 20.5% while maintaining required hydraulic performance</li>
+        <li>Validated numerical flow predictions using transparent physical test tanks, confirming improved oil circulation and eliminating the significant foaming observed in the original reservoir</li>
+      </ul>
+    </div>
+
+    <div class="te">
+      <div class="te-ring"></div><div class="te-dot"></div>
+      <div class="te-date">Aug 2021 – Jan 2024</div>
+      <div class="te-role">TEAM CAPTAIN · VEHICLE DYNAMICS ENGINEER</div>
+      <div class="te-co">PSG College of Technology · Baja SAE · Coimbatore, India</div>
+      <ul class="te-ul">
+        <li>Progressed from Vehicle Dynamics Engineer to Team Captain while contributing to the design, analysis, fabrication, testing, and competition development of a four-wheel-drive Baja SAE all-terrain vehicle</li>
+        <li>Designed and iterated suspension and steering systems using vehicle-dynamics calculations, MATLAB, SolidWorks, and ANSYS to improve handling, steering response, wheel travel, and off-road stability</li>
+        <li>Evaluated suspension geometry, steering kinematics, component strength, and vehicle-level integration through CAD/CAE analysis and physical testing across successive vehicle iterations</li>
+        <li>Led a 25-member multidisciplinary team across design, manufacturing, testing, documentation, and competition preparation while coordinating subsystem interfaces and design reviews</li>
+        <li>Achieved a national top-10 finish among approximately 80 teams at Baja SAE India through iterative vehicle development, cross-functional coordination, and competition execution</li>
+      </ul>
+    </div>
+
+
 
     </div>
   </div>
@@ -470,7 +495,7 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
 
 <section id="projects">
   <div class="sw" style="padding-bottom:1rem">
-    <div class="sh reveal"><div class="sh-eye">Projects</div><div class="sh-title">SELECTED<br>WORK</div><div class="sh-rule"><div class="sh-line"></div><div class="sh-meta">Click any card for more details</div></div></div>
+    <div class="sh reveal"><div class="sh-eye">Projects</div><div class="sh-title">ENGINEERING WORK</div><div class="sh-rule"><div class="sh-line"></div><div class="sh-meta">CFD · FEA · Optimization · Machine Learning</div></div></div>
   </div>
   <div style="position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 3rem 5rem">
     <div class="proj-grid">
@@ -489,10 +514,10 @@ footer p{font-family:var(--mono);font-size:.68rem;color:var(--ink2);letter-spaci
     
     <div class="sh reveal">
       <div class="sh-eye">Publications</div>
-      <div class="sh-title">RESEARCH<br>OUTPUT</div>
+      <div class="sh-title">RESEARCH OUTPUT</div>
       <div class="sh-rule">
         <div class="sh-line"></div>
-        <div class="sh-meta">Click any card for more details</div>
+        <div class="sh-meta">CFD · FSI · Reduced Order Modeling</div>
       </div>
     </div>
 
